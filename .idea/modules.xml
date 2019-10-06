@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FirstTest.iml" filepath="$PROJECT_DIR$/FirstTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newsletter/newsletter.iml" filepath="$PROJECT_DIR$/newsletter/newsletter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tpcalculator/tpcalculator.iml" filepath="$PROJECT_DIR$/tpcalculator/tpcalculator.iml" />
+    </modules>
+  </component>
+</project>
