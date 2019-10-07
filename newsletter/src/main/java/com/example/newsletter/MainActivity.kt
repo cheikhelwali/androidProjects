@@ -1,5 +1,6 @@
 package com.example.newsletter
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
@@ -30,8 +31,18 @@ class MainActivity : AppCompatActivity() {
         articleApi.fetchAllArticles().enqueue(object : Callback<Articles>{ // la methode qui s'occupe de fetcher tous les articles
 
             override fun onResponse(call: Call<Articles>, response: Response<Articles>) {
+
+                if(response.body()!=null){
                 showData(response.body()!!.articles)
-               // d("title","onResponse: ${response.body()!!.articles[0].urlToImage}")
+                }
+                else {
+                    val builder = AlertDialog.Builder(this@MainActivity)
+                    builder.setMessage("Please update the url of the Api")
+                    val dialog: AlertDialog = builder.create()
+
+                    // Display the alert dialog on app interface
+                    dialog.show()
+                }
             }
             override fun onFailure(call: Call<Articles>, t: Throwable) {
                 d("title","onFailure "+t)
